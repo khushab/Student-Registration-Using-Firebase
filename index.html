@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-firestore.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <h1>Student Registration</h1>
+
+    <div class="content">
+
+        <form id="add-student-form">
+            <input type="text" name="name" id="name" placeholder="name">
+            <input type="text" name="city" id="city" placeholder="city">
+            <button id="submitButton">Register</button>
+        </form>
+
+        <ul id="student-list"></ul>
+
+    </div>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+             https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDjYkrQSoH8d4NLIWyLNkhA8p15nCcuTmc",
+            authDomain: "practice-8d97f.firebaseapp.com",
+            projectId: "practice-8d97f",
+            storageBucket: "practice-8d97f.appspot.com",
+            messagingSenderId: "397197447800",
+            appId: "1:397197447800:web:09d4804db08d7c2041938d"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+        db.settings({ timestampsInSnapshots: true });
+    </script>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
